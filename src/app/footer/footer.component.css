@@ -1,0 +1,33 @@
+
+/*za sve str*/
+body {
+  font-family: 'Roboto', sans-serif;
+}
+.navbar{
+    max-width:100%;
+    background-color: #084776;
+}
+.navbar-item{
+  margin:auto;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  text-align:center;
+}
+.navbar-item a {
+  color: white;
+  font-weight:bold;
+}
+.navbar-item a:hover {
+  color: red;
+}
+.person{
+  padding-left:20px;
+  padding-right:20px;
+}
+img{
+  height:183px;
+}
+.mrgn{
+margin-top:15px;
+}

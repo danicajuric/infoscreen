@@ -2,3 +2,9 @@
     max-width:100%;
     background-color: #084776;
 }
+.navbar-item{
+    color: white;
+}
+.navbar-dropdown{
+    color: #084776;
+}

@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { DynamicBackgroundComponent } from './dynamic-background/dynamic-background.component';
+import { SumstrokeComponent } from './sumstroke/sumstroke.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    DynamicBackgroundComponent
+    DynamicBackgroundComponent,
+    SumstrokeComponent
   ],
   imports: [
     BrowserModule,

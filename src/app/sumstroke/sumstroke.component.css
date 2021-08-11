@@ -1,0 +1,56 @@
+
+@keyframes animate-white {
+	0%{
+		stroke-dashoffset: 0;
+	}
+	40%{
+		stroke-dashoffset: 130;
+	}
+	80%{
+		stroke-dashoffset: 260;
+		fill:transparent;
+	}
+	100%{
+		stroke-dashoffset: 130;
+		fill:#FFFFFF;
+	}
+}
+@keyframes animate-red {
+	0%{
+		stroke-dashoffset: 0;
+	}
+	40%{
+		stroke-dashoffset: 130;
+	}
+	80%{
+		stroke-dashoffset: 260;
+		fill:transparent;
+	}
+	100%{
+		stroke-dashoffset: 130;
+		fill:#ED1C24;
+	}
+}
+.st0{
+    z-index:4;
+    fill:transparent;
+	stroke-width:0.3;
+	stroke: #FFFFFF;
+	stroke-dasharray: 130;
+	stroke-dashoffset: 130;
+	animation: animate-white 4s linear forwards ;
+    }
+.st1{
+    z-index:4;
+    fill:transparent;
+	stroke-width:0.3;
+	stroke:#ED1C24;
+	stroke-dasharray: 130;
+	stroke-dashoffset: 130;
+	animation: animate-red 4s linear forwards ;
+    
+}
+*, *::before, *::after{
+    box-sizing: border-box;
+    z-index:4;
+}

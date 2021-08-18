@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'bulma/css/bulma.css';
+@import url('C:\Users\Admin\soonfeed\node_modules\bulma-timeline\dist\css\bulma-timeline.min.css');
+
+/*.fc-daygrid-day.fc-day.fc-day-tue*/ 
+.fc-day-today {
+    background-color: #ED1C24 !important;
+    background-color: #ED1C24 !important;
+}
+.fc-day-today .fc-daygrid-day-number{
+    color:white;
+}
+.fc-header-toolbar, .fc-toolbar, .fc-toolbar-chunk{
+    text-align: center;
+}
+.fc-toolbar-title{
+    color:white;
+    font-size: large;
+}
+.elevateme{
+    z-index:7;
+}
+.naslovi{
+    color:white;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+}

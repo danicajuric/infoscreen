@@ -1,0 +1,17 @@
+full-calendar{
+    height: 38vw;
+    
+}
+#calendarx{
+    height:100%;
+    width:95%;
+    z-index:20;
+    box-sizing: border-box;
+    margin:auto;
+}
+.fc-day-today .fc-daygrid-day-number{
+    color:white;
+}
+.fc-header-toolbar, .fc-toolbar, .fc-toolbar-chunk{
+    text-align: center;
+}

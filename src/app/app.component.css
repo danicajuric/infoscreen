@@ -1,3 +1,5 @@
 body{
+    overflow: auto;
+    height:auto;
     background-color: #084776;
 }

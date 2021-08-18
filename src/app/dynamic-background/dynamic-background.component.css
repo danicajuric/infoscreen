@@ -1,10 +1,16 @@
+html, body
+{
+    height:100%;
+    
+    background-color: #084776;
+}
 .bubbles{
     position: absolute;
     top: 0;
     left: 0;
     width:100%;
     height:100%;
-    z-index:0;
+    z-index:-2;
     transform: translateZ(0);
     background-color: #084776;
     overflow: hidden;
@@ -653,6 +659,3 @@
               transform: scale3d(0.4, 0.4, 1);
     }
   }
-body{
-    z-index:-1;
-}

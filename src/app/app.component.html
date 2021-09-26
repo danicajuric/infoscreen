@@ -9,6 +9,16 @@
 <app-header></app-header>
 <router-outlet></router-outlet>
 <app-dynamic-background></app-dynamic-background>
+<div class="elevateme">
+<owl-carousel-o [options]="customOptions" >
+  <ng-template carouselSlide class="elevateme"><app-sumstroke></app-sumstroke>></ng-template>  
+  <ng-template carouselSlide><div class="elevateme naslovi"><h1>ISPITNI ROKOVI</h1></div>
+    <div id="calendarx">
+        <full-calendar></full-calendar>
+    </div></ng-template>  
+  <ng-template carouselSlide><p style="color:white;">sdvfgds</p>Slide 3</ng-template>  
+</owl-carousel-o>
+</div>
 <app-footer></app-footer>
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->

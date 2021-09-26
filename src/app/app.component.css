@@ -3,3 +3,27 @@ body{
     height:auto;
     background-color: #084776;
 }
+.elevateme{
+    z-index:7;
+}
+full-calendar{
+    height: 36vw;
+    
+}
+#calendarx{
+    height:100%;
+    width:95%;
+    z-index:20;
+    box-sizing: border-box;
+    margin:auto;
+}
+.fc-day-today .fc-daygrid-day-number{
+    color:white;
+}
+.fc-header-toolbar, .fc-toolbar, .fc-toolbar-chunk{
+    text-align: center;
+}
+/*OVO NE RADI - NAĆI SELECTOR KOJI RIJEŠAVA BOJU*/
+.fc-daygrid.fc-dayGridMonth-view.fc-view {
+    background-color: rgb(255,255,255,0.1);
+}

@@ -8,6 +8,7 @@ import { FooterComponent } from './footer/footer.component';
 import { DynamicBackgroundComponent } from './dynamic-background/dynamic-background.component';
 import { SumstrokeComponent } from './sumstroke/sumstroke.component';
 import { TestcalendarComponent } from './testcalendar/testcalendar.component';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 /*fullcalendar imports*/
 import { FullCalendarModule } from '@fullcalendar/angular'; // must go before plugins
@@ -31,7 +32,8 @@ FullCalendarModule.registerPlugins([ // register FullCalendar plugins
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FullCalendarModule
+    FullCalendarModule,
+    CarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]

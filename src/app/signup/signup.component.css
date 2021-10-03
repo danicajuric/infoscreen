@@ -1,0 +1,60 @@
+#wrapper-main{
+    width:60%;
+    margin: auto;
+    margin-top:1vw;
+    background-color: #084776;
+    padding:0.8vw;
+    border-radius: 2em;
+    border: white solid 0.1em;
+}
+#wrapper-close{
+    background-color:white;
+    margin:auto;
+    padding:1vw;
+    border-radius: 2em;
+    vertical-align: center;
+    border: red 0.8em solid;
+}
+#hold_margin{
+    width:80%;
+    margin: 0 auto;
+    padding: 3vw 0;
+    vertical-align: center;
+}
+input{
+    display: block;
+    padding:7px;
+    margin:2.5em auto;
+    width:80%;
+    font-size: 0.9em;
+    border-radius: 1em;
+}
+h1{
+    font-size:2em;
+    font-weight: bold;
+    text-align:center;
+    color:red;
+    text-shadow: #084776 2px 2px 3px;
+}
+input[type=submit]{
+    background-color: #084776;
+    color:white;
+    padding:1em;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+input[type=submit]:hover{
+    background: rgb(255,255,255);
+background: linear-gradient(90deg, rgba(255,255,255,1) 0%, red 40%, red 60%, rgba(255,255,255,1) 100%);
+    color:white;
+    text-decoration: white underline;
+}
+#register-link{
+    background-color: #084776;
+    padding:10px;
+    border-radius:4px;
+    color:white;
+}
+#register-link:hover{
+    color:red;
+}

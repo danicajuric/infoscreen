@@ -36,6 +36,7 @@ export class AppComponent {
       }
     },
     nav: true,
-    autoplayTimeout: 7000
+    autoplaySpeed: 5000,
+    navSpeed: 4000
   }
 }

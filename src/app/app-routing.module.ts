@@ -4,6 +4,7 @@ import { SumstrokeComponent } from './sumstroke/sumstroke.component';
 import { TestcalendarComponent } from './testcalendar/testcalendar.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
+import { NewsComponent } from './news/news.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: "signup",
     component: SignupComponent
+  },
+  {
+    path: "news",
+    component: NewsComponent
   }
 ];
 

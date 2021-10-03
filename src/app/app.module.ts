@@ -20,6 +20,7 @@ import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
+import { NewsComponent } from './news/news.component';
 
 /*somthin not right import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
@@ -50,7 +51,8 @@ const firebaseConfig = {
     SumstrokeComponent,
     TestcalendarComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    NewsComponent
   ],
   imports: [
     BrowserModule,

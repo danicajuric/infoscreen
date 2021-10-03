@@ -1,0 +1,22 @@
+#centering{
+    width:90%;
+    margin: 2em auto;
+}
+#spec-bg1{
+    background-image: url("https://web-admin.sum.ba/api/storage/2020-12-12-0019_1633085784_21.jpg");
+    background-size: cover;
+    filter: grayscale(70%);
+}
+#spec-bg2{
+    background-image: url("https://web-admin.sum.ba/api/storage/3%20(2)_1622626481_29.jpg");
+    background-size: cover;
+    filter: grayscale(70%);
+}
+.box{
+    height:220px;
+    color:white;
+    font-weight:bold;
+}
+.heading{
+    font-size:1em;
+}

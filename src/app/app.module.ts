@@ -21,6 +21,7 @@ import { getAnalytics } from "firebase/analytics";
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { NewsComponent } from './news/news.component';
+import { WeatherComponent } from './weather/weather.component';
 
 /*somthin not right import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
@@ -33,14 +34,17 @@ FullCalendarModule.registerPlugins([ // register FullCalendar plugins
 ]);
 
 const firebaseConfig = {
-  apiKey: "AIzaSyANKJ90KP50OcGs7Z3_fs_E5OPTSf7osjI",
-  authDomain: "infoscreen-f4f6f.firebaseapp.com",
-  projectId: "infoscreen-f4f6f",
-  storageBucket: "infoscreen-f4f6f.appspot.com",
-  messagingSenderId: "1017535888923",
-  appId: "1:1017535888923:web:0461fe9c610e94f07742be",
-  measurementId: "G-GR04NCW2GW"
+  apiKey: "AIzaSyC_5l2hGQlNX662KYf-hr8_ytCsdEUm6lk",
+  authDomain: "realtimethesis.firebaseapp.com",
+  databaseURL: "https://realtimethesis.firebaseio.com",
+  projectId: "realtimethesis",
+  storageBucket: "realtimethesis.appspot.com",
+  messagingSenderId: "1097391395895",
+  appId: "1:1097391395895:web:89e436814bad7a49329bb2",
+  measurementId: "G-XPEX68FFV7"
 };
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 
 @NgModule({
   declarations: [
@@ -52,7 +56,8 @@ const firebaseConfig = {
     TestcalendarComponent,
     LoginComponent,
     SignupComponent,
-    NewsComponent
+    NewsComponent,
+    WeatherComponent
   ],
   imports: [
     BrowserModule,

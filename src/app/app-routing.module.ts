@@ -5,6 +5,7 @@ import { TestcalendarComponent } from './testcalendar/testcalendar.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { NewsComponent } from './news/news.component';
+import { WeatherComponent } from './weather/weather.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: "news",
     component: NewsComponent
+  },
+  {
+    path: "weather",
+    component: WeatherComponent
   }
 ];
 

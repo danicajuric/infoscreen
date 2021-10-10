@@ -3,14 +3,14 @@
 	0%{
 		stroke-dashoffset: 0;
 	}
-	25%{
+	30%{
 		stroke-dashoffset: 130;
 	}
-	50%{
+	60%{
 		stroke-dashoffset: 260;
 		fill:transparent;
 	}
-	60%{
+	100%{
 		stroke-dashoffset: 130;
 		fill:#FFFFFF;
 	}
@@ -19,14 +19,14 @@
 	0%{
 		stroke-dashoffset: 0;
 	}
-	25%{
+	30%{
 		stroke-dashoffset: 130;
 	}
-	50%{
+	60%{
 		stroke-dashoffset: 260;
 		fill:transparent;
 	}
-	60%{
+	100%{
 		stroke-dashoffset: 130;
 		fill:#ED1C24;
 	}
@@ -38,7 +38,7 @@
 	stroke: #FFFFFF;
 	stroke-dasharray: 130;
 	stroke-dashoffset: 130;
-	animation: animate-white 10s linear infinite ;
+	animation: animate-white 7s alternate infinite ;
     }
 .st1{
     z-index:4;
@@ -47,7 +47,7 @@
 	stroke:#ED1C24;
 	stroke-dasharray: 130;
 	stroke-dashoffset: 130;
-	animation: animate-red 10s linear infinite ;
+	animation: animate-red 7s alternate infinite ;
     
 }
 *, *::before, *::after{

@@ -1,16 +1,37 @@
 #centering{
     width:90%;
-    margin: 2em auto;
+    margin: 5em auto;
 }
 #spec-bg1{
     background-image: url("https://web-admin.sum.ba/api/storage/2020-12-12-0019_1633085784_21.jpg");
     background-size: cover;
-    filter: grayscale(70%);
+    text-shadow: 2px 2px 2px black;
 }
 #spec-bg2{
-    background-image: url("https://web-admin.sum.ba/api/storage/3%20(2)_1622626481_29.jpg");
+    background-image: url("https://web-admin.sum.ba/api/storage/rektorzt_1633333829_71.jpeg");
     background-size: cover;
-    filter: grayscale(70%);
+    text-shadow: 2px 2px 2px black;
+}
+#spec-bg3{
+    background-image: url("https://web-admin.sum.ba/api/storage/inicijalnisastanak_1633696276_95.jpeg");
+    background-size: cover;
+    text-shadow: 2px 2px 2px black;
+}
+#spec-bg4{
+    background-image: url("https://web-admin.sum.ba/api/storage/Slika_1633522105_67.jpg");
+    background-size: cover;
+    
+    text-shadow: 2px 2px 2px black;
+}
+#spec-bg5{
+    background-image: url("https://web-admin.sum.ba/api/storage/Slika2_1632047284_95.jpg");
+    background-size: cover;
+    text-shadow: 2px 2px 2px black;
+}
+#spec-bg6{
+    background-image: url("https://web-admin.sum.ba/api/storage/uk_1633612643_37.jpg");
+    background-size: cover;
+    text-shadow: 2px 2px 2px black;
 }
 .box{
     height:220px;

@@ -13,6 +13,6 @@ full-calendar{
 .fc-header-toolbar, .fc-toolbar, .fc-toolbar-chunk{
     text-align: center;
 }
-.fc-daygrid.fc-dayGridMonth-view.fc-view {
-    background-color: rgb(255,255,255,0.1);
+.fc-scrollgrid-sync-table, .fc-scrollgrid-section.fc-scrollgrid-section-body .fc-scrollgrid-section-liquid {
+    background-color: rgb(255,255,255,0.4);
 }

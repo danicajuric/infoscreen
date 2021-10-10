@@ -1,0 +1,20 @@
+#mainDiv{
+    width:70%;
+    margin:5vw auto;
+    padding:2.5em;
+    border: red 5px solid;
+    border-radius: 20px;
+}
+#topHalf{
+    height:22vw;
+}
+#bottomHalf{
+    width: 90%;
+    height:20vw;
+    margin:0;
+}
+.topHalf, .bottomHalf{
+    width: 90%;
+    text-align: center;
+    margin:auto;
+}

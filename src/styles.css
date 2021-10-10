@@ -4,6 +4,10 @@
 @import url('C:\Users\Admin\soonfeed\node_modules\bulma-timeline\dist\css\bulma-timeline.min.css');
 
 /*.fc-daygrid-day.fc-day.fc-day-tue*/ 
+.fc-scrollgrid-sync-table, .fc-scrollgrid-section.fc-scrollgrid-section-body .fc-scrollgrid-section-liquid {
+    background-color: rgb(255,255,255,0.6);
+    border:black;
+}
 .fc-day-today {
     background-color: #ED1C24 !important;
     background-color: #ED1C24 !important;
@@ -11,7 +15,9 @@
 .fc-day-today .fc-daygrid-day-number{
     color:white;
 }
-.fc-header-toolbar, .fc-toolbar, .fc-toolbar-chunk{
+.fc-header-toolbar, 
+.fc-toolbar, 
+.fc-toolbar-chunk{
     text-align: center;
 }
 .fc-toolbar-title{
@@ -27,3 +33,43 @@
     font-weight: bold;
     text-align: center;
 }
+.weatherday{
+    width:auto;
+    margin:1em auto;
+    text-align: center;
+    color: white;
+    font-size:1.5em;
+    display: flex;
+}
+.weatherday2{
+    margin:auto;
+    text-align: center;
+    color: white;
+    display: inline-block;
+}
+.weatherday h2, .weatherday h3, .weatherday2 h2, .weatherday2 h3{
+    display:inline-block;
+    margin:0.1em 0.6em;
+}
+.weatherday h2, .weatherday2 h2{
+    font-weight:bold;
+    text-decoration: underline red solid 0.5px;
+}
+.weatherday #main{
+    height:12vw;
+    min-height: 10vw;
+}
+#left2day{
+    float:left;
+}
+#right2day{
+    float:right;
+    text-align: left;
+}
+.smallLetter{
+    font-size:0.7em;
+}
+.smallLetter2{
+    font-size:0.7em;
+}
+#forecast{width:45%; margin:auto; text-align: center;}

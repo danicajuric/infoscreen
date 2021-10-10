@@ -11,29 +11,32 @@
 <app-dynamic-background></app-dynamic-background>
 <div class="elevateme">
   <owl-carousel-o [options]="customOptions">
-    <ng-template carouselSlide class="elevateme">
-      <app-sumstroke></app-sumstroke>>
-    </ng-template>
-
-    <ng-template carouselSlide>
-      <div class="columns">
-        <div class="column is-1"></div>
-        <div class="column is-11">
-          <div class="elevateme naslovi">
-            <h1>ISPITNI ROKOVI</h1>
-          </div>
-          <div id="calendarx">
-            <full-calendar></full-calendar>
-          </div>
-        </div>
-      </div>
-    </ng-template>
-
-    <ng-template carouselSlide>
-      <app-news></app-news>
-    </ng-template>
-  </owl-carousel-o>
-</div>
+     <ng-template carouselSlide class="elevateme">
+       <app-sumstroke></app-sumstroke>>
+     </ng-template>
+ 
+     <ng-template carouselSlide>
+       <div class="columns">
+         <div class="column is-12">
+           <div class="elevateme naslovi">
+             <h1>RASPORED SATI</h1>
+           </div>
+           <div id="calendarx">
+             <full-calendar></full-calendar>
+           </div>
+         </div>
+       </div>
+     </ng-template>
+ 
+     <ng-template carouselSlide>
+       <app-news></app-news>
+     </ng-template>
+ 
+     <ng-template carouselSlide>
+       <app-weather></app-weather>
+     </ng-template>
+   </owl-carousel-o>
+ </div>
 <app-footer></app-footer>
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->

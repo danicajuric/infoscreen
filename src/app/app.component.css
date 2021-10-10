@@ -3,7 +3,6 @@ body{
     height:auto;
     background-color: #084776;
 }
-
 .elevateme{
     z-index:7;
 }
@@ -23,5 +22,5 @@ full-calendar{
     text-align: center;
 }
 .fc-daygrid.fc-dayGridMonth-view.fc-view {
-    background-color: rgb(255,255,255,0.1);
+    background-color: rgb(255,255,255,0.3);
 }

@@ -1,28 +1,43 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
+import { HttpClientModule } from '@angular/common/http';
+
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { DynamicBackgroundComponent } from './dynamic-background/dynamic-background.component';
 import { SumstrokeComponent } from './sumstroke/sumstroke.component';
 import { TestcalendarComponent } from './testcalendar/testcalendar.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
+import { NewsComponent } from './news/news.component';
+import { WeatherComponent } from './weather/weather.component';
 
 /*fullcalendar imports*/
 import { FullCalendarModule } from '@fullcalendar/angular'; // must go before plugins
 import dayGridPlugin from '@fullcalendar/daygrid'; // a plugin!
 import interactionPlugin from '@fullcalendar/interaction'; // a plugin!
 
-/*firebase imports*/
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-import { LoginComponent } from './login/login.component';
-import { SignupComponent } from './signup/signup.component';
-import { NewsComponent } from './news/news.component';
-import { WeatherComponent } from './weather/weather.component';
 
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAnalyticsModule } from '@angular/fire/compat/analytics';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { environment } from '../environments/environment';
+
+/*firebase imports
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";//getdatabase
+import { getDatabase } from "firebase/database";*/
+
+//import { AngularFireModule } from '@angular/fire';
+//import { AngularFireAuthModule } from '@angular/fire/auth';
+//import { AngularFirestoreModule } from '@angular/fire/firestore';
 /*somthin not right import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
@@ -33,6 +48,7 @@ FullCalendarModule.registerPlugins([ // register FullCalendar plugins
   interactionPlugin
 ]);
 
+/*//this might not belong here - see environment.ts!!! if useless, delete
 const firebaseConfig = {
   apiKey: "AIzaSyC_5l2hGQlNX662KYf-hr8_ytCsdEUm6lk",
   authDomain: "realtimethesis.firebaseapp.com",
@@ -45,6 +61,10 @@ const firebaseConfig = {
 };
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
+
+const db = getDatabase(app);*/
+//getref
+//delete all the way to here if needed
 
 @NgModule({
   declarations: [
@@ -61,20 +81,17 @@ const analytics = getAnalytics(app);
   ],
   imports: [
     BrowserModule,
+    AngularFireModule.initializeApp(environment.firebase),
     AppRoutingModule,
     FullCalendarModule,
-    CarouselModule
-    /* nope 3. Initialize
-    AngularFireModule.initializeApp(config),
-    AngularFirestoreModule, // firestore
-    AngularFireAuthModule, // auth
-    AngularFireStorageModule // storage*/
+    CarouselModule,
+    AngularFireAnalyticsModule,
+    AngularFirestoreModule,
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-/*these are a problem
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);*/
 
 export class AppModule { }

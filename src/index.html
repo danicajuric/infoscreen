@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>Infoscreen</title>
@@ -7,9 +8,151 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="/app/app.component.css">
-
+  <script>
+    let makeMyDay = function (dayNumber) {
+      if (dayNumber == 0) {
+        return dayNumber = "NEDJELJA";
+      }
+      else if (dayNumber == 1) {
+        return dayNumber = "PONEDJELJAK";
+      }
+      else if (dayNumber == 2) {
+        return dayNumber = "UTORAK";
+      }
+      else if (dayNumber == 3) {
+        return dayNumber = "SRIJEDA";
+      }
+      else if (dayNumber == 4) {
+        return dayNumber = "ČETVRTAK";
+      }
+      else if (dayNumber == 5) {
+        return dayNumber = "PETAK";
+      }
+      else if (dayNumber == 6) {
+        return dayNumber = "SUBOTA";
+      }
+      else return dayNumber = "?";
+    }
+    let showMyFace = function (iconCode) {
+      if (iconCode == "10d") {
+        return iconCode = "rain02";
+      }
+      else if (iconCode == "01d") {
+        return iconCode = "clear";
+      }
+      else if (iconCode == "02d") {
+        return iconCode = "partlycloudy";
+      }
+      else if (iconCode == "03d") {
+        return iconCode = "scatteredclouds";
+      }
+      else if (iconCode == "04d") {
+        return iconCode = "hazy";
+      }
+      else if (iconCode == "09d") {
+        return iconCode = "rain01";
+      }
+      else if (iconCode == "11d") {
+        return iconCode = "thunderstorms01";
+      }
+      else if (iconCode == "13d") {
+        return iconCode = "snow";
+      }
+      else if (iconCode == "50d") {
+        return iconCode = "fog";
+      }
+      else if (iconCode == "10n") {
+        return iconCode = "rain01";
+      }
+      else if (iconCode == "04n") {
+        return iconCode = "cloudy";
+      }
+      else {
+        return iconCode = "chancerain";
+      }
+    }
+    function myFunction() {
+      fetch('https://api.openweathermap.org/data/2.5/forecast?q=Mostar, Bosnia and Herzegovina&appid=0fae17cfaa2e13582bbc98271ec8877f&lang=hr&units=metric')
+        .then(response => response.json())
+        .then(data => {
+          let WeatherLady = data.list;
+          //Big chunk of json
+          //console.log(WeatherLady);
+          //Small compact for 1 day
+          //console.log(WeatherLady[0]);
+          //console.log(WeatherLady[0].weather[0]); // I'm not crying, just watering my beard ༼☯﹏☯༽
+          //console.log(WeatherLady[0].weather[0].description);
+  
+          //console.log(WeatherLady[0].main); // I has temperature! (//ω//) 
+          console.log(WeatherLady[0].wind); // I will blow you away (ノಠ益ಠ)ノ彡┻━┻
+  
+          //VARIABLE ZA DANAS
+          let wind = WeatherLady[0].wind.speed;
+          let tempW = WeatherLady[0].main.temp;
+          let description = WeatherLady[0].weather[0].description.toUpperCase();
+          let icon = WeatherLady[0].weather[0].icon;
+          //Finding day number
+          var dt = new Date(WeatherLady[0].dt_txt.slice(0, 10));
+          let dayW = dt.getDay();
+          console.log("Date: " + dt.getDay());
+  
+          //VARIJABLE ZA 6DNEVNU PROGNOZU
+          for (let i = 1; i < 7; i++) {
+            var dt = new Date(WeatherLady[i].dt_txt.slice(0, 10));
+            let dayW2 = dt.getDay() + i-1;
+            
+            let temp2 = WeatherLady[i].main.temp;
+            let wind2 = WeatherLady[i].wind.speed;
+            let description2 = WeatherLady[i].weather[0].description.toUpperCase();
+            console.log(WeatherLady[i].weather[0].icon);
+            let icon2 = WeatherLady[i].weather[0].icon;
+            displayWeather2(dayW2, description2, icon2, wind2, temp2);
+          }
+  
+          displayWeather(dayW, description, icon, wind, tempW);
+        })
+        .catch(err => alert("Doesn't work"));
+  
+      //REFRESH SA SVRHOM KUPLJENJA NOVIH PODATAKA O VREM PROG
+      /*function timedRefresh(time) {
+        setTimeout("location.reload(true);", time);
+      }
+      timedRefresh(3600000);//OSVJEŽAVA SVAKIH 1H*/
+    }
+    let displayWeather = function (dayW, description, icon, wind, tempW) {
+  
+      let dayw2 = makeMyDay(dayW);
+      let iconw2 = showMyFace(icon);
+  
+      let out = "<div class='weatherday'><div id='left2day'><img id='main' src='/assets/" + iconw2 + ".png'/></div>";
+      out += "<div id='right2day'><h2>" + dayw2 + "</h2></br>";
+      out += "<h3>" + wind + " <span class='smallLetter'>m/s</span></h3><img style='height:1em; float:right;' src='/assets/wind.svg'/></br>";
+      out += "<h3>" + tempW + " <span class='smallLetter'>°C</span></h3><img style='height:1.2em; float: right;' src='/assets/temperature-thermometer.svg'/></br>";
+      out += "<h3>" + description + "</h3</div></div>";
+      document.getElementById("forecast").innerHTML += out;
+      console.log(out);
+    };
+    let displayWeather2 = function (dayW, description, icon, wind, tempW) {
+  
+      let dayw2 = makeMyDay(dayW);
+  
+      let iconw2 = showMyFace(icon);
+  
+      let out = "<div class='weatherday2'><img src='/assets/" + iconw2 + ".png'/></br>";
+      out += "<h2>" + dayw2 + "</h2></br>";
+      out += "<h3>" + wind + " <span class='smallLetter2'>m/s</span></h3><img style='height:0.8em; ' src='/assets/wind.svg'/></br>";
+      out += "<h3>" + tempW + " <span class='smallLetter2'>°C</span></h3><img style='height:0.8em; ' src='/assets/temperature-thermometer.svg'/></br>";
+      out += "<h3>" + description + "</h3</div>";
+      document.getElementById("forecast2").innerHTML += out;
+      console.log(out);
+    };
+    myFunction();
+  </script>
 </head>
+
 <body>
   <app-root></app-root>
 </body>
+
+
 </html>

@@ -3,7 +3,17 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    apiKey: "AIzaSyC_5l2hGQlNX662KYf-hr8_ytCsdEUm6lk",
+    authDomain: "realtimethesis.firebaseapp.com",
+    databaseURL: "https://realtimethesis.firebaseio.com",
+    projectId: "realtimethesis",
+    storageBucket: "realtimethesis.appspot.com",
+    messagingSenderId: "1097391395895",
+    appId: "1:1097391395895:web:89e436814bad7a49329bb2",
+    measurementId: "G-XPEX68FFV7"
+  }
 };
 
 /*

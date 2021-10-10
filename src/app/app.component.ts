@@ -2,24 +2,32 @@ import { Component } from '@angular/core';
 import { CalendarOptions } from '@fullcalendar/angular';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 
+import { AngularFireDatabase } from '@angular/fire/compat/database';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
   title = 'infoscreen';
+  
+  //firebase constructor
+  constructor(db: AngularFireDatabase) { }
+
   calendarOptions: CalendarOptions = {
-    initialView: 'dayGridMonth'
+    initialView: 'dayGridMonth',
   };
+
   customOptions: OwlOptions = {
     center: true,
     autoplay:true,
     loop: true,
-    mouseDrag: false,
+    mouseDrag: true,
     touchDrag: false,
     pullDrag: false,
-    dots: false,
+    dots: true,
     navText: ['', ''],
     responsive: {
       0: {
@@ -36,7 +44,7 @@ export class AppComponent {
       }
     },
     nav: true,
-    autoplaySpeed: 500,
-    navSpeed: 450
+    autoplaySpeed: 5000,
+    navSpeed: 5000
   }
 }
